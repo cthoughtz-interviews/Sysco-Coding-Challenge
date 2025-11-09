@@ -36,6 +36,10 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
+    
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 
     kotlinOptions {
         jvmTarget = "11"
@@ -130,10 +134,15 @@ dependencies {
     implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
 
     // Testing
+    testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("io.mockk:mockk:1.13.8")
     testImplementation("app.cash.turbine:turbine:1.0.0")
+    testImplementation("com.google.truth:truth:1.1.5")
 
     // Pagination
     implementation("androidx.paging:paging-compose:3.3.6")
     implementation("androidx.paging:paging-runtime-ktx:3.3.6")
+    testImplementation(kotlin("test"))
 }

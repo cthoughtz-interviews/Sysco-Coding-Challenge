@@ -1,9 +1,7 @@
 package com.simple.syscostarwarstakehomeproject.di
 
-import com.simple.syscostarwarstakehomeproject.data.remoteDataSource.PlanetsRemoteDataSource
-import com.simple.syscostarwarstakehomeproject.data.remoteDataSource.PlanetsRemoteDataSourceImpl
 import com.simple.syscostarwarstakehomeproject.data.repository.PlanetsRepository
-import com.simple.syscostarwarstakehomeproject.data.repository.PlanetsRepositoryImpl
+import com.simple.syscostarwarstakehomeproject.domain.repoImpl.PlanetsRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

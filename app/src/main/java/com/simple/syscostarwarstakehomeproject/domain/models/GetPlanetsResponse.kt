@@ -15,32 +15,32 @@ data class GetPlanetsResponse(
 ) {
     data class Planet(
         @SerializedName("name")
-        var name: String?,
+        var name: String? = null,
         @SerializedName("rotation_period")
-        var rotationPeriod: String?,
+        var rotationPeriod: String? = null,
         @SerializedName("orbital_period")
-        var orbitalPeriod: String?,
+        var orbitalPeriod: String? = null,
         @SerializedName("diameter")
-        var diameter: String?,
+        var diameter: String? = null,
         @SerializedName("climate")
-        var climate: String?,
+        var climate: String? = null,
         @SerializedName("gravity")
-        var gravity: String?,
+        var gravity: String? = null,
         @SerializedName("terrain")
-        var terrain: String?,
+        var terrain: String? = null,
         @SerializedName("surface_water")
-        var surfaceWater: String?,
+        var surfaceWater: String? = null,
         @SerializedName("population")
-        var population: String?,
+        var population: String? = null,
         @SerializedName("residents")
-        var residents: List<String?>?,
+        var residents: List<String?>? = null,
         @SerializedName("films")
-        var films: List<String?>?,
+        var films: List<String?>? = null,
         @SerializedName("created")
-        var created: String?,
+        var created: String? = null,
         @SerializedName("edited")
-        var edited: String?,
+        var edited: String? = null,
         @SerializedName("url")
-        var url: String?
+        var url: String? = null
     )
 }
