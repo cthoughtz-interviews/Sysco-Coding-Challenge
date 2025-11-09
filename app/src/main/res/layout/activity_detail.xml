@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentation.views.activities.DetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue_background_color"
+            android:orientation="horizontal"
+            android:padding="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/outline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/planet_details"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/planetDetailsBackgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/background_image"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutView" />
+
+
+        <TextView
+            android:id="@+id/planetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Taboiine"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowRadius="5"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/planetClimate"
+            app:layout_constraintStart_toStartOf="@id/planetClimate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/planetClimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/climate"
+            android:text="arid"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/planetDetailsBackgroundImage"
+            app:layout_constraintStart_toStartOf="@id/planetDetailsBackgroundImage" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDetailsView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/planetDetailsBackgroundImage">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/dark_blue_background_color"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/blue_800"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/globe"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/climate"
+                        android:gravity="center"
+                        android:text="Orbital Period"
+                        android:textColor="@color/secondary_text_label" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="304"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:id="@+id/orbitalPeriod"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="days"
+                        android:textColor="@color/state_500"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/background_purp"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/light_purp"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/droplets"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/droplet"
+                        android:text="Gravity"
+                        android:textColor="@color/secondary_text_label" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 standed"
+                        android:id="@+id/gravity"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="standard"
+                        android:textColor="@color/state_500"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/dark_blue_background_color"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutDetailsView"
+            app:strokeColor="@color/card_stroke">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/additionalInformationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/additional_information"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:id="@+id/populationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/users"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/emerald_400"
+                    android:textColor="@color/secondary_text_label"
+                    android:gravity="center"
+                    android:text="@string/population"
+                    app:layout_constraintStart_toStartOf="@id/additionalInformationLabel"
+                    app:layout_constraintTop_toBottomOf="@id/additionalInformationLabel" />
+
+                <TextView
+                    android:id="@+id/populationAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="300,00000"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/populationLabel"
+                    app:layout_constraintTop_toBottomOf="@id/populationLabel"
+                    tools:text="200,000" />
+
+                <View
+                    android:id="@+id/dividerOne"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/card_stroke"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/populationAmount" />
+
+                <TextView
+                    android:id="@+id/populationDiameterLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/globe"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/cyan_400"
+                    android:gravity="center"
+                    android:text="Diameter"
+                    android:textColor="@color/secondary_text_label"
+                    app:layout_constraintStart_toStartOf="@id/additionalInformationLabel"
+                    app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+                <TextView
+                    android:id="@+id/diameterAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="300,00000"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/populationDiameterLabel"
+                    app:layout_constraintTop_toBottomOf="@id/populationDiameterLabel"
+                    tools:text="200,000" />
+
+                <View
+                    android:id="@+id/dividerTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/card_stroke"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/diameterAmount" />
+
+                <TextView
+                    android:id="@+id/planetRotationalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/mountain"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/orange_400"
+                    android:gravity="center"
+                    android:text="Rotational Period"
+                    android:textColor="@color/secondary_text_label"
+                    app:layout_constraintStart_toStartOf="@id/additionalInformationLabel"
+                    app:layout_constraintTop_toBottomOf="@id/dividerTwo" />
+
+                <TextView
+                    android:id="@+id/rotationalPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="30 hr"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/populationDiameterLabel"
+                    app:layout_constraintTop_toBottomOf="@id/planetRotationalLabel"
+                    tools:text="200,000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
