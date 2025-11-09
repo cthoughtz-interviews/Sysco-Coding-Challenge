@@ -2,10 +2,12 @@ package com.simple.syscostarwarstakehomeproject.presentation.views.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.isDigitsOnly
 import coil.load
+import com.simple.syscostarwarstakehomeproject.R
 import com.simple.syscostarwarstakehomeproject.databinding.ActivityDetailBinding
 import com.simple.syscostarwarstakehomeproject.presentation.utils.CLIMATE_NAME
 import com.simple.syscostarwarstakehomeproject.presentation.utils.DIAMETER
@@ -34,6 +36,8 @@ class DetailsActivity : AppCompatActivity() {
         val populationArgs = intent.getStringExtra(POPULATION)
         val diameterArgs = intent.getStringExtra(DIAMETER)
         val rotationalPeriod = intent.getStringExtra(ROTATIONAL_PERIOD)
+
+        Log.d("CheckImage", "$imageNumberArgs")
 
         uiSetup(
             imageNumberArgs,
@@ -64,9 +68,13 @@ class DetailsActivity : AppCompatActivity() {
             }
 
             if (imageNumberArgs != null) {
-                planetDetailsBackgroundImage.load("https://picsum.photos/id/$imageNumberArgs/700/500")
+                planetDetailsBackgroundImage.load("https://picsum.photos/id/$imageNumberArgs/700/500") {
+                    placeholder(R.drawable.loading_image)
+                }
             } else {
-                planetDetailsBackgroundImage.load("https://picsum.photos/id/827/700/500")
+                planetDetailsBackgroundImage.load("https://picsum.photos/id/827/700/500") {
+                    placeholder(R.drawable.loading_image)
+                }
             }
 
             planetName.text = planetNameArgs
